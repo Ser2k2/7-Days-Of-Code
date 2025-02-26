@@ -1,0 +1,35 @@
+<!--Día dos #7DaysOfCode-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafí02</title>
+</head>
+<body>
+    
+    <p id="demo01"></p>
+
+    <p id="demo02"></p>
+
+    <script>
+        const nombreUsuario = prompt("¿Cuál es tu nombre?");
+        const edadUsuario = prompt("¿Cuántos años tienes?");
+        const lenguajeProgramacion = prompt("¿Qué lenguaje de programación estás estudiando?");
+
+
+        document.getElementById("demo01").innerHTML =
+        `Hola ${nombreUsuario}, tienes ${edadUsuario} años y ya estás aprendiendo ${lenguajeProgramacion}!"`;
+
+        const respuestaUsuario = prompt(`¿Te gusta estudiar ${lenguajeProgramacion}? Responde con el número 1 para SÍ o 2 para NO?`)
+        
+        if (respuestaUsuario == 1) {
+            document.getElementById("demo02").innerHTML = "¡Muy bien! Sigue estudiando y tendrás mucho éxito.";
+        }
+        
+        if (respuestaUsuario == 2) {
+            document.getElementById("demo02").innerHTML = "Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?";            
+        }
+    </script>
+</body>
+</html>
