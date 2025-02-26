@@ -1,0 +1,24 @@
+Dia uno  #7DaysOfCode
+
+let numeroUno = 1; 
+let stringUno = '1';
+let numeroTreinta = 30;
+let stringtreinta = '30';
+let numeroDiez = 10;
+let stringDiez = '10';
+
+if (numeroUno == stringUno) {
+    console.log(`Las variables ${numeroUno} y ${stringUno} tienen el mismo valor, pero tipos diferentes ${typeof(numeroUno)} y ${typeof(stringUno)}`);    
+} else {
+    console.log(`Las variables ${numeroUno} y ${stringUno} no tienen el mismo valor`);
+}
+
+if (numeroTreinta === stringtreinta) {
+    console.log(`Las variables ${numeroTreinta} y ${stringtreinta} tienen el mismo valor y el mismo tipo.s ${typeof(numeroTreinta)} y ${typeof(stringtreinta)}`);
+} else{
+    console.log(`Las variables ${numeroTreinta} y ${stringtreinta} no tienen el mismo tipo`);
+}
+
+if (numeroDiez == stringDiez) {
+    console.log(`Las variables ${numeroDiez} y ${stringDiez} tienen el mismo valor, pero tipos diferentes ${typeof(numeroDiez)} y ${typeof(stringDiez)}`);
+}
