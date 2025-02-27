@@ -1,0 +1,95 @@
+<!--Día tres #7DaysOfCode-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio03</title>
+</head>
+<body>
+    
+    <script>
+        const primerDestino = 
+        prompt("¿Quiere seguir hacia el área de 'Front-End' (escoja el número 1)  o seguir hacia el área de 'Back-End' (escoja el número 2)?");
+
+        if (primerDestino == 1) {
+            const frontEnd = 
+            prompt("Esta en el área de 'Front-End' ¿Quiere aprender 'React'(escoja el número 1) o aprender 'Vue' (escoja el número 2)?");
+
+            if (frontEnd == 1) {
+                const react = 
+                prompt("Esta en el área de 'React' ¿Quiere seguir especializandose en 'React' (escoja el número 1) o desarrollarse para convertirse en 'Fullstack'(escoja el número 2)");
+
+                if (react == 1) {
+                    alert("Felicidades por seguir especializandose en 'React'.");
+                } else if (react == 2) {
+                    alert("Felicidades por especializarce en 'Fullstack'.");
+                } else {
+                    alert("Escoja una de las opciones anteriores!");
+                }
+            } else if (frontEnd == 2) {
+                const vue = 
+                prompt("Esta en el área de 'Vue' ¿Quiere seguir especializandose en 'Vue' (escoja el número 1) o desarrollarse para convertirse en 'Fullstack' (escoja el número 2)");
+
+                if (vue == 1) {
+                    alert("Felicidades por seguir especializandose en 'Vue'.");
+                } else if (vue == 2) {
+                    alert("Felicidades por especializarce en 'Fullstack'.");
+                } else {
+                    alert("Escoja una de las opciones anteriores!");
+                }
+
+            } else {
+                alert("Escoja una de las opciones anteriores!");
+            }
+
+        } else if (primerDestino == 2) {
+            const backEnd =
+            prompt("Esta en el área de 'Back-End' ¿Quiere aprender 'C#' (escoja el número 1) o aprender 'Java' (escoja el número 2)?");
+
+            if (backEnd == 1) {
+                const cSharp = prompt("Esta en el área de 'C#' ¿Quiere seguir especializandose en 'C#' (escoja el número 1) o desarrollarse para convertirse en 'Fullstack'(escoja el número 2)");
+                
+                if (cSharp == 1) {
+                    alert("Felicidades por seguir especializandose en 'C#'.");
+                } else if (cSharp == 2) {
+                    alert("Felicidades por especializarce en 'Fullstack'.");
+                } else {
+                    alert("Escoja una de las opciones anteriores!");
+                }
+
+            } else if (backEnd == 2) {
+                const java = prompt("Esta en el área de 'Java' ¿Quiere seguir especializandose en 'Java' (escoja el número 1) o desarrollarse para convertirse en 'Fullstack'(escoja el número 2)");
+                
+                if (java == 1) {
+                    alert("Felicidades por seguir especializandose en 'Java'.");
+                } else if (java == 2) {
+                    alert("Felicidades por especializarce en 'Fullstack'.");
+                } else {
+                    alert("Escoja una de las opciones anteriores!");
+                }
+            } else {
+                alert("Escoja una de las opciones anteriores!")
+            }
+
+        } else {
+            alert("Escoja una de las opciones anteriores!");
+        }
+
+        // Función para preguntar sobre tecnologías y comentar algo sobre ellas
+        function preguntarTecnologias() {
+        let seguir = 'ok';
+        while (seguir.toLowerCase() === 'ok') {
+            let tecnologia = prompt('¿En qué tecnologías te gustaría especializarte o conocer?');
+            alert('¡Genial! ' + tecnologia + ' es una tecnología muy interesante.');
+      
+            seguir = prompt('¿Hay alguna otra tecnología que te gustaría aprender? Responde "ok" para continuar o cualquier otra cosa para terminar.');
+            } 
+        }
+
+        // Ejecutar la función
+        preguntarTecnologias();
+    </script>
+</body>
+</html>
