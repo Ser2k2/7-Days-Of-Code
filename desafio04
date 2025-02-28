@@ -1,0 +1,16 @@
+const numeroAdivinar = Math.floor(Math.random() * 11);;
+        //console.log(numeroAdivinar);
+
+        function adivinaNumero() {
+            for (intentos = 1; intentos < 4; intentos++) {
+                let numero = prompt("¿Cuál es el valor que desea adivinar?");
+                if (numero == numeroAdivinar) {
+                    alert(`Felicidades, adivinastes el numero ${numero}`);
+                    break;
+                } else {
+                    alert(`Haz ocupado el intento(s) ${intentos}. Te quedan ${3 - intentos} intento(s).`);
+                }
+            }
+        }
+
+        adivinaNumero();
