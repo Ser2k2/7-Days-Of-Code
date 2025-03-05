@@ -1,0 +1,35 @@
+        let frutas = [];
+        let lacteos = [];
+        let dulces = [];
+        let congelados = [];
+        let agregarLista = 'si';        
+
+        while (agregarLista == 'si') {
+            let agregarLista = prompt('¿Desea agregar un alimlento a tu lista de compras (si o no)?');
+
+            while (agregarLista.toLowerCase() != 'si' && agregarLista.toLowerCase() != 'no') {
+                alert('Operacion no reconocida!');
+                agregarLista = prompt('¿Desea agregar un alimlento a tu lista de compras (si o no)?');
+            }
+            
+            if (agregarLista.toLowerCase() === 'no') {
+                break; // se utiliza porque estamos en un loop while y es para salir del loop while
+            }
+        
+
+            let alimento = prompt('¿Que alimento deseas agregar?');
+            let categoriaAlimento = prompt('¿En qué categoria  quiere poner el alimento?\n Frutas(1)\n Lacteos (2)\n Dulces (3)\n Congelados (4)');
+
+            if (categoriaAlimento == 1) {
+                frutas.push(alimento);
+            } else if (categoriaAlimento == 2) {
+                lacteos.push(alimento);
+            } else if (categoriaAlimento == 3) {
+                dulces.push(alimento);
+            } else if (categoriaAlimento == 4) {
+                congelados.push(alimento);
+            } else {
+                alert('Esa categoria no está predefinida.');
+            }
+        }
+        alert(`Lista de compras:\n  Frutas: ${frutas}\n  Lácteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}`); 
