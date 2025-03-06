@@ -1,0 +1,67 @@
+let frutas = [];
+        let lacteos = [];
+        let dulces = [];
+        let congelados = [];
+        let alimento = '';
+        let categoriaAlimento = '';
+        let eliminar = '';
+        let agregarLista = 'si';        
+
+        while (agregarLista == 'si') {
+            //let agregarLista = prompt('¿Desea agregar un alimlento a tu lista de compras (si o no)?');
+            if (frutas.length === 0 && lacteos.length === 0 && dulces.length === 0 && congelados.length === 0) {
+                agregarLista = prompt('¿Desea agregar un alimento a tu lista de compras (si o no)?');
+            } else {
+                agregarLista = prompt('¿Desea agregar un alimento a tu lista de compras (si, no o eliminar)?');
+            }
+
+            while (agregarLista.toLowerCase() != 'si' && agregarLista.toLowerCase() != 'no' && agregarLista.toLowerCase() !== 'eliminar') {
+                alert('Operacion no reconocida!');
+                agregarLista = prompt('¿Desea agregar un alimento a tu lista de compras (si o no)?');
+            }
+            
+            if (agregarLista.toLowerCase() === 'no') {
+                break; // se utiliza porque estamos en un loop while y es para salir del loop while
+            }
+
+            if (agregarLista.toLowerCase() === 'si') {
+                //let alimento = prompt('¿Que alimento deseas agregar?');
+                //let categoriaAlimento = prompt('¿En qué categoria  quiere poner el alimento?\n Frutas(1)\n Lacteos (2)\n Dulces (3)\n Congelados (4)');
+                alimento = prompt('¿Que alimento deseas agregar?');
+                categoriaAlimento = prompt('¿En qué categoria  quiere poner el alimento?\n Frutas(1)\n Lacteos (2)\n Dulces (3)\n Congelados (4)');
+
+                if (categoriaAlimento == 1) {
+                    frutas.push(alimento);
+                } else if (categoriaAlimento == 2) {
+                    lacteos.push(alimento);
+                } else if (categoriaAlimento == 3) {
+                    dulces.push(alimento);
+                } else if (categoriaAlimento == 4) {
+                    congelados.push(alimento);
+                } else {
+                    alert('Esa categoria no está predefinida.');
+                }
+            } else if (agregarLista.toLowerCase() === 'eliminar') {
+                if (frutas.length === 0 && lacteos.length === 0 && dulces.length === 0 && congelados.length === 0) {
+                    alert('¡La lista esta vacia!');
+                } else {
+                    eliminar = prompt(`Lista de compras:\n  Frutas: ${frutas}\n  Lácteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}\n\n¿Qué producto deseas eliminar?`);
+                    if (frutas.indexOf(eliminar) != -1) {
+                        frutas.splice(frutas.indexOf(eliminar), 1);
+                        alert(`¡El ítem ${eliminar} ha sido elimindo con éxito!`)
+                    } else if (lacteos.indexOf(eliminar) != -1) {
+                        lacteos.splice(lacteos.indexOf(eliminar), 1);
+                        alert(`¡El ítem ${eliminar} ha sido elimindo con éxito!`)
+                    } else if (dulces.indexOf(eliminar) != -1) {
+                        dulces.splice(dulces.indexOf(eliminar), 1);
+                        alert(`¡El ítem ${eliminar} ha sido elimindo con éxito!`)
+                    } else if (congelados.indexOf(eliminar) != -1) {
+                        congelados.splice(congelados.indexOf(eliminar), 1);
+                        alert(`¡El ítem ${eliminar} ha sido elimindo con éxito!`)
+                    } else {
+                        alert(`¡No fue posible encontrar el ítem dentro de la lista!`)
+                    }
+                }
+            }             
+        }
+        alert(`Lista de compras:\n  Frutas: ${frutas}\n  Lácteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}`);
